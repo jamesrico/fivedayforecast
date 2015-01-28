@@ -1,4 +1,4 @@
-var url = 'http://api.wunderground.com/api/5b85b19f7e8c43f1/forecast/q/37201.json';
+var url = 'https://api.wunderground.com/api/152eccaad753eb4b/forecast10day/q/37207.json';
 
 getJSON(url, function(data){
   console.log(data);
