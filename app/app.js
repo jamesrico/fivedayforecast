@@ -2,7 +2,7 @@
 
 
 getJSON('http://api.wunderground.com/api/4918254d9046ce6c/forecast/q/Tn/Nashville.json', function(data){
-   var list = createList(data.cohort7students);
+   var list = createList(data.forecast);
 
    document.querySelector('ul').appendChild(list);
 });
