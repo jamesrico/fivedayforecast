@@ -1,7 +1,11 @@
 
 
+var url = 'https://api.wunderground.com/api/152eccaad753eb4b/forecast10day/q/37207.json';
 
-getJSON('http://api.wunderground.com/api/4918254d9046ce6c/10day/q/Tn/Nashville.json', function(data){
+
+
+
+getJSON(url, function(data){
    var list = createList(data.forecast);
 
    document.querySelector('ul').appendChild(list);
