@@ -3,7 +3,9 @@ var input = document.querySelector('input'),
     url   = 'http://api.wunderground.com/api/5b85b19f7e8c43f1/forecast10day/q/37201.json';
 
 getJSON(url, function(data){
-  document.querySelector('body').innerHTML = data.forecast.txt_forecast.forecastday[0].title;
+  document.querySelector('.dayone').innerHTML = data.forecast.txt_forecast.forecastday[0].title;
+  document.querySelector('.daytwo').innerHTML = data.forecast.txt_forecast.forecastday[1].title;
+
 });
 
 function createdForecastList(){
