@@ -1,13 +1,9 @@
-
+'use strict';
 
 var url = 'https://api.wunderground.com/api/152eccaad753eb4b/forecast10day/q/37207.json';
 
-
-
-
 getJSON(url, function(data){
    var list = createList(data.forecast);
-
    document.querySelector('ul').appendChild(list);
 });
 
