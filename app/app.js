@@ -37,4 +37,70 @@ function getJSON(url, cb){
 
   request.send();
 }
+/////* semi working attempt
 
+var url = 'http://api.wunderground.com/api/5b85b19f7e8c43f1/forecast10day/q/37201.json';
+var forecast;
+
+getJSON(url, function(data){
+forecast = data.forecast;
+});
+
+function getJSON(url, cb) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+xhr.onload = function () {
+if (this.status >= 200 && this.status < 400) {
+cb(JSON.parse(this.response));
+}
+};
+xhr.send()
+}
+
+forecast.txt_forecast.forecastday[0]
+
+/////** failed attempt two
+var url = 'http://api.wunderground.com/api/5b85b19f7e8c43f1/forecast10day/q/37201.json';
+var data = res['forecast'];
+
+var weatherByday = _(data).map(function(value){
+return txt_forecast;
+})
+.chunk(2)
+.value();
+
+var ul = document.querySelector('ul');
+ul.appendChild(createList(weatherByday));
+});
+
+function createList(array) {
+var docFragment = document.
+createDocumentFragment();
+
+_.forEach(array, function(day){
+var ol = document.createElement('ol');
+
+_forEach(day, function(weather){
+var li = document.createElement('li');
+var text = document.createTextNode(
+weather);
+li.appendChild(text);
+ol.appendChild(li);
+})
+return docFragment;
+}
+
+getJSON(url, function(data){
+return value.forecastday;
+});
+
+function getJSON(url, cb) {
+var xhr = new XMLHttpRequest();
+xhr.open('GET', url);
+xhr.onload = function () {
+if (this.status >= 200 && this.status < 400) {
+cb(JSON.parse(this.response));
+}
+};
+xhr.send()
+}
