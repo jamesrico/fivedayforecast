@@ -10,9 +10,10 @@ document.querySelector('#submitButton').addEventListener('click', function() {
     console.log(customUrl);
   var zipCodeUrl = 'https://api.wunderground.com/api/152eccaad753eb4b/forecast10day/q/37207.json';
     console.log(zipCodeUrl);
+  return customUrl;
 });
 
-function getJSON(url, cb){
+function getJSON(customUrl, cb){
   var request = new XMLHttpRequest();
   request.open('GET', url);
 
