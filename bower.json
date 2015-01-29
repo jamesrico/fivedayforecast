@@ -1,0 +1,20 @@
+{
+  "name": "fivedayforecast",
+  "version": "0.0.0",
+  "homepage": "https://github.com/jamesrico/fivedayforecast",
+  "authors": [
+    "Bryan Finlayson <bdfinlayson@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.5.0",
+    "lodash": "~3.0.0"
+  }
+}
