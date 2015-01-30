@@ -44,5 +44,3 @@ function getJSON(url, cb) {
   xhr.send()
 }
 
-
-
